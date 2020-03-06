@@ -1,8 +1,7 @@
 import java.io.IOException;
-import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
+
 
 /**
  * @description:
@@ -14,27 +13,15 @@ public class ServerMain {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(8899);
-            //等待客户端建立连接
-            Socket client = serverSocket.accept();
-            //输出流
-            PrintStream printStream = new PrintStream(client.getOutputStream());
-            //回复建立连接
-            printStream.println("你好，我是服务端，已成功建立连接。");
-            //获取输入流
-            Scanner scanner = new Scanner(client.getInputStream());
-            try {
-                while (true) {
-                    if (scanner.hasNext()) {
-                        System.out.println(scanner.next());
-                        //断开
-                        client.close();
-                        break;
-                    }
-                }
-            }catch (Exception e){
-                e.printStackTrace();
-            } finally {
-                client.close();
+            //建立连接数
+            int count = 0;
+            while (true) {
+                System.out.println("当前建立连接数:" + count ++);
+                //等待客户端建立连接
+                Socket client = serverSocket.accept();
+                //创建一个线程去跟客户端
+                ServerProcesserThread serverProcesserThread = new ServerProcesserThread(client);
+                new Thread(serverProcesserThread).start();
             }
         } catch (IOException e) {
             e.printStackTrace();
