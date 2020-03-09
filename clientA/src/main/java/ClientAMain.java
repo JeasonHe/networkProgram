@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author: hejiale
  * @create: 2020/03/02 22:03
  */
-public class ClientMain {
+public class ClientAMain {
 
     public static void main(String[] args) {
         try {
