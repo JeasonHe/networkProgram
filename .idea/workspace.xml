@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53ece600-09ee-4f23-9bdd-69173d434639" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clientB/src/main/java/ReadThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientB/src/main/java/WriteThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/ReadThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/WriteThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientB/src/main/java/ClientBMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientB/src/main/java/ClientBMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientB/src/main/java/ReadThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientB/src/main/java/ReadThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientB/src/main/java/WriteThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientB/src/main/java/WriteThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/ServerMain.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +65,9 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -79,12 +84,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ClientBMain">
     <configuration name="ClientAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ClientAMain" />
       <module name="clientA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientBMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClientBMain" />
+      <module name="clientB" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,11 +111,13 @@
     <list>
       <item itemvalue="Application.ClientAMain" />
       <item itemvalue="Application.ServerMain" />
+      <item itemvalue="Application.ClientBMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientAMain" />
+        <item itemvalue="Application.ClientBMain" />
         <item itemvalue="Application.ServerMain" />
+        <item itemvalue="Application.ClientAMain" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +136,9 @@
       <workItem from="1583324883804" duration="1508000" />
       <workItem from="1583411798317" duration="8718000" />
       <workItem from="1583662542315" duration="1604000" />
-      <workItem from="1583759705655" duration="3389000" />
+      <workItem from="1583759705655" duration="3647000" />
+      <workItem from="1583803254717" duration="745000" />
+      <workItem from="1584003525638" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="客户端和服务端可以相互完成一次通信">
       <created>1583412672739</created>
@@ -145,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583761252324</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="全双工：客户端读写两个线程执行">
+      <created>1583764061526</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583764061526</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +191,7 @@
     <MESSAGE value="客户端和服务端可以相互完成一次通信" />
     <MESSAGE value="多个客户端可以同时和服务端完成一次通信" />
     <MESSAGE value="新增一个client" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增一个client" />
+    <MESSAGE value="全双工：客户端读写两个线程执行" />
+    <option name="LAST_COMMIT_MESSAGE" value="全双工：客户端读写两个线程执行" />
   </component>
 </project>

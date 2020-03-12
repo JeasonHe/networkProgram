@@ -25,7 +25,8 @@ public class ServerMain {
                 //等待客户端建立连接
                 Socket client = serverSocket.accept();
                 //创建一个线程去跟客户端通信
-                executorService.submit(new ServerProcesserThread(client));
+                executorService.submit(new ReadThread(client));
+                executorService.submit(new WriteThread(client));
             }
         } catch (IOException e) {
             e.printStackTrace();

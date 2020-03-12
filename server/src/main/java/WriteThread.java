@@ -10,13 +10,13 @@ import java.util.Scanner;
  */
 public class WriteThread implements Runnable {
 
-    private Socket clientSocket;
+    private Socket serverSocket;
     private Scanner keyboardScanner;
     private PrintStream writer;
     private String msg;
 
     public WriteThread(Socket socket) {
-        this.clientSocket = socket;
+        this.serverSocket = socket;
         this.keyboardScanner = new Scanner(System.in);
     }
 
@@ -31,27 +31,29 @@ public class WriteThread implements Runnable {
      *
      * @see Thread#run()
      */
+    @Override
     public void run() {
         try {
-            this.writer = new PrintStream(this.clientSocket.getOutputStream());
+            this.writer = new PrintStream(this.serverSocket.getOutputStream());
             while (keyboardScanner.hasNextLine()) {
                 this.msg = keyboardScanner.nextLine();
                 this.writer.println(this.msg);
-                System.out.println(clientSay(this.msg));
+                System.out.println(serverSay(this.msg));
+
                 //退出循环
                 if ("end".equals(this.msg)){
                     break;
                 }
             }
             //断开连接
-            clientSocket.close();
+            serverSocket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("客户端B，已经离线");
+        System.out.println("客户端，已经离线");
     }
 
-    private static String clientSay(String msg) {
+    private static String serverSay(String msg) {
         return "我：" + msg;
     }
 
