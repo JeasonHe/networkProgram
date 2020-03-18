@@ -136,7 +136,8 @@
       <workItem from="1583803254717" duration="745000" />
       <workItem from="1584003525638" duration="1741000" />
       <workItem from="1584006582404" duration="80000" />
-      <workItem from="1584006691938" duration="1019000" />
+      <workItem from="1584006691938" duration="1868000" />
+      <workItem from="1584498025114" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="客户端和服务端可以相互完成一次通信">
       <created>1583412672739</created>
@@ -173,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584004256072</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="更新Markdown">
+      <created>1584078605976</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584078605977</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +206,7 @@
     <MESSAGE value="新增一个client" />
     <MESSAGE value="全双工：客户端读写两个线程执行" />
     <MESSAGE value="支持全双工通信" />
-    <option name="LAST_COMMIT_MESSAGE" value="支持全双工通信" />
+    <MESSAGE value="更新Markdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新Markdown" />
   </component>
 </project>
